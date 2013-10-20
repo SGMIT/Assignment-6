@@ -88,7 +88,7 @@
 <TD colspan=3>
 </TD>
 <TD>
-<input name="btnEquals" type="Button" value="  =  " onclick="Operation('=')">
+<input name="btnEquals" type="Button" value="  =  " onclick="Operation('=')" onmouseover='this.style.backgroundColor="yellow";' onmouseout='this.style.backgroundColor="white";'>
 </TD>
 </TR>
 </TABLE>
@@ -127,7 +127,7 @@
             else if ('/' == PendingOp)
                 Accumulate /= parseFloat(Readout);
             else if ('*' == PendingOp)
-                Accumulate *= (parseFloat(Readout) * 1.2);
+                Accumulate *= parseFloat(Readout);
             else
                 Accumulate = parseFloat(Readout);
             FKeyPad.ReadOut.value = Accumulate;
